@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>About us</title>
+<link rel="stylesheet" type="text/css" href="take1css.css">
+<script src="jquery-3.3.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  // Fading out displayed paragraphs
+    $(".dl").click(function(){
+      $("#no").fadeOut();
+	        $("#yes").fadeIn();
+	  });
+	  $(".exit").mouseover(function(){
+      $("#yes").fadeOut();
+	        $("#no").fadeIn();
+	  });
+        
+
+});
+
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+</script>
+</head>
+<body>
+	<header><b><p style="font-size: 25px;">Baby Immunization<img src="logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px;"></p></b></header><br><br><br>
+    <ul >
+<li ><a  href="home.html">HOME</a></li>
+<li ><a  class="activelink" href="#ABOUTUS">ABOUT</a>
+
+</li>
+<li ><a  href="services.html">SERVICES</a></li>
+<li ><a  href="contactus.html">CONTACT US</a></li>
+<li ><a  href="login.html">LOGIN</a></li>
+</ul>
+<div align="center" class="prop">
+<h1>About Us</h1>
+</div>
+<div class="property2" id="circle">
+<p style="padding-top: 44px;"><b>Why immunize your baby?</b></p>
+<p>To make their immune system fortified against agents that may cause a disease.</p>
+
+
+</div>
+<div class="property22" id="circle">
+<p style="padding-top: 30px;"><b>Why store your baby immunization records safely?</b></p>
+<p>To have an easy time in following the whole immunization process.</p>
+</div>
+<div class="property3" id="slideshow">
+   <div>
+     <img src="pic1.jpg">
+   </div>
+   <div>
+     <img src="pic2.jpg">
+   </div>
+   
+    <div>
+     <img src="pic4.jpg">
+   </div>
+
+</div>
+<div class="property4" id="circle">
+<p style="padding-top: 29px;"><b>What we do:</b></p>
+<p>
+*Help mothers store their baby immunization records online.</p>
+<p>*Display a list of the immunization schedule.</p>
+
+</div>
+<div class="property44" id="circle">
+<p style="padding-top: 58px;"><a  href="manual.pdf" >SYSTEM MANUAL</a></p>
+</div>
+<div class="lowerbar" align="center">
+<p><a href="home.html">HOME</a>			<a  href="about.html">ABOUT</a>			<a  href="services.html">SERVICES</a>			<a href="contactus.html">CONTACT US</a>			<a  href="login.html">LOGIN</a></p>
+<p>Copyright Baby Immunization Schedule</p>
+</div>
+			
+</body>
+</html>

@@ -5,6 +5,35 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Services</title>
 	<link rel="stylesheet" href="styles.css">
+	<style>
+		#btnlinks, #btnlinks1, #btnlinks2, #btnlinks3
+		{
+			width:1000px;
+			padding: 7.5% 50px;
+			margin: 0px auto;
+		}
+		.btn
+		{
+			width: 180px;
+			display: inline-block;
+			margin: 5% 20px;
+			padding: 0px ;
+			text-align: center;
+			font-family: montserrat-Regular;
+			text-decoration: none;
+			position: relative;
+		}
+		#a
+		{
+			background-color: #ff00e4;
+			color: #58014f;
+			border-radius: 30px;
+			text-align: right;
+			width: 60px;
+			padding-right: 20px;
+		}
+		
+	</style>
 </head>
 <body>
 	
@@ -12,35 +41,48 @@
 	<nav>
 		<ul>
 			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Services</a></li>
-			<li><a href="#">Contact us</a></li>
+			<li><a href="aboutus.html">About</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="contactus.html">Contact us</a></li>
 			<li><a href="#">Login</a></li>
 		</ul>
 	</nav><br><br><br>
 
 	<h1><b>Our Services<hr><i>Record Your Baby Data Online To Access It Anywhere</i></h1></b>
 
-	<img src="vaccination.jpg" alt="Vaccination" style="width:290px; margin-left: 70px;">
-<select name="vaccination" >
-	<option value="list"><a href="vaccinelist.php">Vaccines List</a></option>
-	<option value="scheduled">Vaccines Scheduled</option>
-	<option value="administered">Vaccines Administered</option>
-</select>
-	<img src="medicine.jpg" alt="Medicine" style="width:200px; margin-left: 220px;">
-	<select name="medicine" >
-	<option value="list">Medicine List</option>
-	<option value="taken">Medicine Taken</option>
-</select>
 
-	<img src="growth.jpg" alt="Growth" style="width:290px; margin-left: 70px;">
-	<select name="growth" >
-	<option value="height">Baby Height</option>
-	<option value="weight">Baby Weight</option>
-	<option value="age">Baby Age</option>
-</select>
-	<img src="pediatrician.jpg" alt="Pediatrician" style="width:270px; margin-left: 260px;">
+<!-- vaccine links-->	
+	<div id="btnlinks">
+		<img src="vaccination.jpg" alt="Vaccination" style="width:290px; ">
+		<a href="vaccinelist.html" id="a" class="btn">Vaccine List</a>
+		<a href="#" id="a" class="btn">Vaccine Administered</a>
+		<a href="#" id="a" class="btn">Vaccine Scheduled</a>
+	</div>
 
+
+<!-- medicine links-->
+	<div id="btnlinks1">
+	<img src="medicine.jpg" alt="Medicine" style="width:250px; ">
+	<a href="#" id="a" class="btn">Medicine Taken</a>
+		<a href="#" id="a" class="btn">Dosage</a>
+		<a href="#" id="a" class="btn">Comments</a>
+
+	</div>
+
+<!-- growth links-->
+<div id="btnlinks2">
+	<img src="growth.jpg" alt="Growth" style="width:290px; ">
+		<a href="#" id="a" class="btn">Baby Height</a>
+		<a href="#" id="a" class="btn">Baby Weight</a>
+		<a href="#" id="a" class="btn">Baby Age</a>
+
+</div>
+
+	<div id="btnlinks3">
+	<img src="pediatrician.jpg" alt="Pediatrician" style="width:270px; ">
+	<a href="#" id="a" class="btn">Pediatrician Records</a>
+
+</div>
 	<footer>
 		<p>HOME, ABOUT, SERVICES,CONTACT US,LOGIN</p>
 		<p><b>Copyright &copy; 2018. Baby Immunization Scheduler</b> </p>

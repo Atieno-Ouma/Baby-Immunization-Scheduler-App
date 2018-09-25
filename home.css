@@ -1,0 +1,100 @@
+#myNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: crimson;
+    height: 3em;
+}
+.contents{
+    float: right;
+    display: inline;
+    list-style-type: none;
+    margin: 0.5em;
+    padding: 0.5em;
+    overflow: hidden;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-align: center;
+}
+.contents:hover{
+    background-color: brown;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.images{
+    width: 100%;
+}
+.articles{
+    background: white;
+    height: 30em;
+}
+.articles h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: crimson;
+}
+#about{
+    position: relative;
+    left: 10em;
+    width: 15em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#services{
+    position: relative;
+    top: -13em;
+    left: 35em;
+    width: 15em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#logup{
+    position: relative;
+    top: -39em;
+    left: 60em;
+    width: 15em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#why_us{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    left: 34%;
+    width: 30em;
+}
+#why_us h1{
+    text-align: center;
+    color: crimson;
+    font-size: 45px; 
+}
+footer{
+    background-color: grey;
+}
+footer p{
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer ul{
+    display: inline;
+    list-style-type: none;
+    margin: 0.5em;
+    padding: 0.5em;
+    overflow: hidden;
+    color: white;
+    font-family: sans-serif;
+    box-align: center;
+}
+footer li{
+    text-align: center;
+}
+footer ul:hover{
+    cursor: pointer;
+    background-color: #d2cdc7;
+    border-radius: 5px;
+}
+/*.parallax1{
+        background-image: url("baby4.png");
+        min-height: 500px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}*/

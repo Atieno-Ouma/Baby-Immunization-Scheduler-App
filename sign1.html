@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="style5.css">
+	<title></title>
+</head>
+<body>
+
+<div class="Sign-Up">
+  <header class="header">
+    <span class="text">SIGN-UP</span>
+    <span class="loader"></span>
+  </header>
+  <form class="form">  
+    <input class="input" type="text", placeholder="Username">
+    <input class="input" type="password" placeholder="Password">
+    <button class="btn" type="submit"></button>
+  </form>
+</div>
+<button class ="resetbtn" type= "reset">Reset it
+</button>
+<script>
+$(document).ready(function() {
+  $('.input').on('focus', function() {
+    $('.Sign-Up').addClass('clicked');
+  });
+  $('.Sign-Up').on('submit', function(e) {
+    e.preventDefault();
+    $('.Sign-Up').removeClass('clicked').addClass('loading');
+  });
+  $('.resetbtn').on('click', function(e){
+      e.preventDefault();
+    $('.Sign-Up').removeClass('loading');
+  });
+});
+
+</script>
+</body>
+</html>

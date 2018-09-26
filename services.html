@@ -9,8 +9,8 @@
 		#btnlinks, #btnlinks1, #btnlinks2, #btnlinks3
 		{
 			width:1000px;
-			padding: 7.5% 50px;
-			margin: 0px auto;
+			padding: 5% 50px;
+			margin: 20px auto;
 		}
 		.btn
 		{
@@ -22,6 +22,7 @@
 			font-family: montserrat-Regular;
 			text-decoration: none;
 			position: relative;
+			font-size: 25px;
 		}
 		#a
 		{
@@ -54,7 +55,7 @@
 <!-- vaccine links-->	
 	<div id="btnlinks">
 		<img src="vaccination.jpg" alt="Vaccination" style="width:290px; ">
-		<a href="vaccinelist.html" id="a" class="btn">Vaccine List</a>
+		 <input type="button" id="a" class="btn" value="Vaccine List" onclick="vaccinespopup()">
 		<a href="#" id="a" class="btn">Vaccine Administered</a>
 		<a href="#" id="a" class="btn">Vaccine Scheduled</a>
 	</div>
@@ -88,5 +89,15 @@
 		<p><b>Copyright &copy; 2018. Baby Immunization Scheduler</b> </p>
 	</footer>
 
+
+<!-- pop up script for vaccines-->
+<script>
+	var mylist;
+
+	function vaccinespopup()
+	{
+		mylist = window.open('vaccinelist.html','_blank','height=500,width=500');
+	}
+</script>
 </body>
 </html>

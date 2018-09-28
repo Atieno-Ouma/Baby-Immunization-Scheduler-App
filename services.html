@@ -5,6 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Services</title>
 	<link rel="stylesheet" href="styles.css">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
 		#btnlinks, #btnlinks1, #btnlinks2, #btnlinks3
 		{
@@ -55,7 +63,41 @@
 <!-- vaccine links-->	
 	<div id="btnlinks">
 		<img src="vaccination.jpg" alt="Vaccination" style="width:290px; ">
-		 <input type="button" id="a" class="btn" value="Vaccine List" onclick="vaccinespopup()">
+		<div class="container">
+
+		<div class="table-responsive">
+			<button type="button" name="add" id="add" data-toggle="modal" data-target="#meme" class="btn btn-warning">View Vaccines List</button>
+		</div>
+
+
+		<div id="meme" class="modal fade">
+<table class="table table-striped table-hover">
+
+	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	<header class="bg-primary p-4 text-white text-center">
+		<h3>VACCINE LIST</h3>
+	</header>
+	<th>Vaccine Name</th>
+	<th>Method to Administer</th>
+	<th>Baby Age to be Administered</th>
+	<th>Status</th>
+
+	<tr>
+		<td>BCG</td>
+		<td>Injection</td>
+		<td>Birth</td>
+		<td>Administered</td>
+	</tr>
+	<tr>
+		<td>Polio</td>
+		<td>Oral</td>
+		<td>Birth</td>
+		<td>Administered</td>
+	</tr>
+</table>
+
+	</div>
+	</div>
 		<a href="#" id="a" class="btn">Vaccine Administered</a>
 		<a href="#" id="a" class="btn">Vaccine Scheduled</a>
 	</div>
@@ -90,14 +132,7 @@
 	</footer>
 
 
-<!-- pop up script for vaccines-->
-<script>
-	var mylist;
 
-	function vaccinespopup()
-	{
-		mylist = window.open('vaccinelist.html','_blank','height=500,width=500');
-	}
 </script>
 </body>
 </html>

@@ -48,6 +48,8 @@ ul li:hover ul li{
 }
 .activelink{
 	background-color: white;
+		display: inline-block;
+
 }
 .property1{
 	  position: absolute;

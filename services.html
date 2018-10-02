@@ -13,12 +13,22 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/moment.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 	<style>
 		#btnlinks, #btnlinks1, #btnlinks2, #btnlinks3
 		{
 			width:100px;
 			padding: 1px;
 			margin: 2px ;
+			border-style: none;
+			background-color: white;
+			color: blue;
 		}
 		.btn
 		{
@@ -31,26 +41,41 @@
 			font-size: 25px;
 			display: inline-block;
 		}
-		#a
+		nav
 		{
-			background-color: #ff00e4;
-			color: #58014f;
-			border-radius: 30px;
-			text-align: right;
-			width: 160px;
+			background-color: cyan;
+			color: black;
+			text-align: center;
+			width: 500px;
 			padding-right: 20px;
+			display: inline-block;
+			padding-top: 0px;
+			justify-content: space-around;
+			display: flex;
+			margin: 0 5px;
+
 		}
-		
+		nav ul li {
+    border-left:1px ;
+    list-style-type:none;
+    padding:10px;
+    width:100%;                                 
+    }
+    .activelink{
+	background-color: white;
+	display: inline-block;
+
+}
 	</style>
 </head>
 <body>
 	
-	<header><b><p style="font-size: 25px;">Baby Immunization<img src="logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px;"></p></b></header><br><br><br>
+	<header><b><p style="font-size: 25px; padding-left: 3px;">Baby Immunization<img src="logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px; padding-top: 20px; padding-left: 3px;"></p></b></header><br>
 	<nav>
 		<ul>
 			<li><a href="home.html">Home</a></li>
 			<li><a href="aboutus.html">About</a></li>
-			<li><a href="services.html">Services</a></li>
+			<li><a class="activelink"  href="services.html">Services</a></li>
 			<li><a href="contactus.html">Contact us</a></li>
 			<li><a href="#">Login</a></li>
 		</ul>
@@ -61,37 +86,36 @@
 
 <!-- vaccine links-->	
 	<div id="btnlinks">
-		<img src="vaccination.jpg" alt="Vaccination" style="width:290px; ">
+		
 		<div class="container">
 
 		<div class="table-responsive">
-			<button type="button" name="add" id="add" data-toggle="modal" data-target="#meme" class="btn btn-warning">View Vaccines List</button>
+			
 		</div>
 
 
-		<div id="meme" class="modal fade">
-<table class="table table-striped table-hover">
+		<div id="meme" class="modal fade" style="color: white; float: center; font-size: 25px;">
+<table class="table table-sm" height="300px;" width="300px;">
 
 	<button type="button" class="close" data-dismiss="modal">&times;</button>
-	<header class="bg-primary p-4 text-white text-center">
-		<h3>VACCINE LIST</h3>
+	<header class="bg-primary text-white">
+		<h3 style="text-align: center;">VACCINE LIST</h3>
 	</header>
 	<th>Vaccine Name</th>
 	<th>Method to Administer</th>
 	<th>Baby Age to be Administered</th>
-	<th>Status</th>
 
 	<tr>
 		<td>BCG</td>
 		<td>Injection</td>
 		<td>Birth</td>
-		<td>Administered</td>
+		
 	</tr>
 	<tr>
 		<td>Polio</td>
 		<td>Oral</td>
 		<td>Birth</td>
-		<td>Administered</td>
+		
 	</tr>
 </table>
 
@@ -99,73 +123,171 @@
 	</div>
 
 
-<div class="container">
-
-		<div class="table-responsive">
-			<button type="button" name="add" id="add" data-toggle="modal" data-target="#meme" class="btn btn-warning">View Vaccines List</button>
 		</div>
 
 
-		<div id="meme" class="modal fade">
-<table class="table table-striped table-hover">
-
-	<button type="button" class="close" data-dismiss="modal">&times;</button>
-	<header class="bg-primary p-4 text-white text-center">
-		<h3>VACCINE LIST</h3>
-	</header>
-	<th>Vaccine Name</th>
-	<th>Method to Administer</th>
-	<th>Baby Age to be Administered</th>
-	<th>Status</th>
-
-	<tr>
-		<td>BCG</td>
-		<td>Injection</td>
-		<td>Birth</td>
-		<td>Administered</td>
-	</tr>
-	<tr>
-		<td>Polio</td>
-		<td>Oral</td>
-		<td>Birth</td>
-		<td>Administered</td>
-	</tr>
-</table>
-
-	</div>
-	</div>	
+<!--table to take in the functionalities -->
+<table border="0" style="color: black; font-weight: bold;">
+<tr>
+	<!--Imagesrow -->
+	<td><img src="vaccination.jpg" width="300px;" height="300px;" style="padding-right: 12px; margin-left: 20px; margin-right: 25px;"></td>
+	<td><img src="medicine.jpg" width="300px;" height="300px;" style="padding-right: 12px; margin-right: 20px;""></td>
+	<td><img src="growth.jpg" width="300px;" height="300px;" style="padding-right: 12px; margin-right: 20px;""></td>
+	<td><img src="pediatrician.jpg" width="300px;" height="300px;" style="padding-right: 12px;"></td>
+</tr>
 
 
+<!--row 1 of links -->
+<tr >
+	
+
+<td style="padding-left: 40px;">
+
+<button type="button" name="add" id="add" data-toggle="modal" data-target="#meme" class="btn btn-warning" style="color: blue; background-color: white; padding-left: 40px; border-style: none;"> Vaccines List</button>
+
+</td>
+<td style="padding-left: 40px;">
+ 		<a href="#" id="a" class="btn">Medicine Taken</a>
+</td>
+<td style="padding-left: 40px;">
+	<a href="#" id="a" class="btn">Baby Height</a>
+</td>
+<td style="padding-left: 50px;">
+		<a href="#" id="a" class="btn">Pediatrician Records</a>
+</td>
+</tr>
 
 
+<!--row 2 of links -->
 
+<tr>
+	<td style="padding-left: 33px;">  
+<button type="button" name="add" id="add" data-toggle="modal" data-target="#add_data_Modal" class="btn btn-warning" style="color: blue; background-color: white; padding-left: 40px; border-style: none;">Vaccine Administered</button>
 
+</td>
 
-		</div>
-
-
-<!-- medicine links-->
-	<div id="btnlinks1">
-	<img src="medicine.jpg" alt="Medicine" style="width:250px; ">
-	<a href="#" id="a" class="btn">Medicine Taken</a>
-		<a href="#" id="a" class="btn">Dosage</a>
-		<a href="#" id="a" class="btn">Comments</a>
-
-	</div>
-
-<!-- growth links-->
-<div id="btnlinks2">
-	<img src="growth.jpg" alt="Growth" style="width:290px; ">
-		<a href="#" id="a" class="btn">Baby Height</a>
+		<td style="padding-left: 40px;">
+			<a href="#" id="a" class="btn">Medicine Dosage</a>
+</td>
+	<td style="padding-left: 40px;">
 		<a href="#" id="a" class="btn">Baby Weight</a>
-		<a href="#" id="a" class="btn">Baby Age</a>
+</td>
+	
 
+</tr>
+
+
+<!--row 3 of links -->
+
+<tr>
+	<td style="padding-left: 40px;">
+
+<button type="button" name="add" id="add" data-toggle="modal" data-target="#add_data_Modal1" class="btn btn-warning" style="color: blue; background-color: white; padding-left: 40px; border-style: none;">Vaccine Scheduled</button>
+
+</td>
+		<td style="padding-left: 40px;">
+			 	<a href="#" id="a" class="btn">Comments</a>
+		</td>
+
+	<td style="padding-left: 40px;">
+	<a href="#" id="a" class="btn">Baby Age</a>
+</td>
+	<td></td>
+
+</tr>
+
+
+
+</table>
+
+
+
+<!--vaccines administered pop up -->
+<div class="container">
+		<div class="table-responsive">
+			
+		</div>
+	</div>
+
+	<div id="add_data_Modal" class="modal fade" >
+		
+		<div class="modal-dialog">
+			
+			<div class="modal-content">
+				<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Add Vaccines Administered</h4>
+				</div>
+				<div class="modal-body">
+				<form method="post" id="insert_form" enctype="multipart/form-data" action="#">
+					<label>Vaccine Name</label>
+					<input type="text" name="name" id="name" class="form-control"><br>
+					<label>Vaccine Price</label>
+					<input type="text" name="price" id="price" class="form-control"><br>
+					<label>Date Scheduled</label>
+					<input type="date" name="date" id="startdate" class="form-control"><br>
+					<label>Date of Administration</label>
+					<input type="date" name="date" id="enddate" class="form-control"><br>
+					<label>Baby Age</label>
+					<input type="text" name="age" id="age" class="form-control"><br>
+					<label>Hospital Administered At</label>
+					<input type="text" name="hospital" id="hospital" class="form-control"><br>
+					<label>Pediatrician Name</label>
+					<input type="text" name="pediatrician" id="pediatrician" class="form-control"><br>
+					
+					<br>
+					
+					<input type="submit" name="insert" id="insert" value="Submit">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
 </div>
 
-	<div id="btnlinks3">
-	<img src="pediatrician.jpg" alt="Pediatrician" style="width:270px; ">
-	<a href="#" id="a" class="btn">Pediatrician Records</a>
 
+<!-- vaccines scheduled pop up-->
+
+<div class="container">
+		<div class="table-responsive">
+			
+		</div>
+	</div>
+
+	<div id="add_data_Modal1" class="modal fade" >
+		
+		<div class="modal-dialog">
+			
+			<div class="modal-content">
+				<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Schedule Vaccines</h4>
+				</div>
+				<div class="modal-body">
+				<form method="post" id="insert_form" enctype="multipart/form-data" action="#">
+					<label>Vaccine Name</label>
+					<input type="text" name="name" id="name" class="form-control"><br>
+				
+					<label>Date Scheduled</label>
+					<input type="date" name="date" id="startdate" class="form-control"><br>
+
+					
+					<label>Hospital To Be Administered At</label>
+					<input type="text" name="hospital" id="hospital" class="form-control"><br>
+					
+					<label>Comments</label>
+					<textarea name="comment" id="comment" class="form-control"></textarea>
+
+					<input type="submit" name="insert" id="insert" value="Schedule">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
 </div>
 	<footer>
 		<p>HOME, ABOUT, SERVICES,CONTACT US,LOGIN</p>
@@ -174,6 +296,30 @@
 
 
 
-</script>
+
+
+<!-- Script 
+   <script>
+        $(function () {
+            $('#startdate,#enddate').datetimepicker({
+                useCurrent: false,
+                minDate: moment()
+            });
+            $('#startdate').datetimepicker().on('dp.change', function (e) {
+                var incrementDay = moment(new Date(e.date));
+                incrementDay.add(1, 'days');
+                $('#enddate').data('DateTimePicker').minDate(incrementDay);
+                $(this).data("DateTimePicker").hide();
+            });
+
+            $('#enddate').datetimepicker().on('dp.change', function (e) {
+                var decrementDay = moment(new Date(e.date));
+                decrementDay.subtract(1, 'days');
+                $('#startdate').data('DateTimePicker').maxDate(decrementDay);
+                 $(this).data("DateTimePicker").hide();
+            });
+
+        });
+    </script> -->
 </body>
 </html>

@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: crimson;
+    background-color: cyan;
     height: 3em;
 }
 .contents{
@@ -18,7 +18,7 @@
     box-align: center;
 }
 .contents:hover{
-    background-color: brown;
+    background-color: white;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -65,7 +65,7 @@
     font-size: 45px; 
 }
 footer{
-    background-color: grey;
+    background-color: cyan;
 }
 footer p{
     text-align: center;

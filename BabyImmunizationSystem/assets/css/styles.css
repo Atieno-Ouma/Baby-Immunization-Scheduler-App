@@ -1,0 +1,55 @@
+
+header
+{
+	float: left;
+	padding-top: 0px;
+}
+
+nav
+{
+	float: right;
+	background-color: cyan;
+	width: 25%;
+}
+
+ul
+{
+	list-style: none;
+	text-decoration: none;
+}
+
+li 
+{
+	display: block;
+	display: inline;
+	text-decoration: none;
+}
+
+h1
+{
+	font-size:30px;
+	text-align: center;
+
+}
+hr
+{
+	width: 50%;
+}
+li a
+{ display: inline;
+  text-decoration: none; 
+  font-size: 18px;
+}
+img
+{
+	border-radius: 50%;
+}
+
+footer
+{
+ bottom: 5px;
+ background-color: cyan;
+ text-align: center;
+ width: 100%;
+ left: 0;
+ }

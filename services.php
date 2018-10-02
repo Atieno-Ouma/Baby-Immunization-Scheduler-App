@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -219,24 +225,26 @@
 						<h4 class="modal-title">Add Vaccines Administered</h4>
 				</div>
 				<div class="modal-body">
-				<form method="post" id="insert_form" enctype="multipart/form-data" action="#">
+				<form method="POST" id="insert_form" enctype="multipart/form-data" action="administered.php">
+
+					<span style="color: red;">Your Records Will be Updated Once You Click Submit</span><br><br>
+
 					<label>Vaccine Name</label>
-					<input type="text" name="name" id="name" class="form-control"><br>
+					<input type="text" name="name" id="name" class="form-control" required><br>
 					<label>Vaccine Price</label>
-					<input type="text" name="price" id="price" class="form-control"><br>
+					<input type="text" name="price" id="price" class="form-control" required><br>
 					<label>Date Scheduled</label>
-					<input type="date" name="date" id="startdate" class="form-control"><br>
+					<input type="date" name="date1" id="startdate" class="form-control" required><br>
 					<label>Date of Administration</label>
-					<input type="date" name="date" id="enddate" class="form-control"><br>
+					<input type="date" name="date2" id="enddate" class="form-control" required><br>
 					<label>Baby Age</label>
-					<input type="text" name="age" id="age" class="form-control"><br>
+					<input type="text" name="age" id="age" class="form-control" required><br>
 					<label>Hospital Administered At</label>
-					<input type="text" name="hospital" id="hospital" class="form-control"><br>
+					<input type="text" name="hospital" id="hospital" class="form-control" required><br>
 					<label>Pediatrician Name</label>
-					<input type="text" name="pediatrician" id="pediatrician" class="form-control"><br>
+					<input type="text" name="pediatrician" id="pediatrician" class="form-control" required><br>
 					
-					<br>
-					
+
 					<input type="submit" name="insert" id="insert" value="Submit">
 				</form>
 			</div>
@@ -246,6 +254,8 @@
 		</div>
 	</div>
 </div>
+
+
 
 
 <!-- vaccines scheduled pop up-->
@@ -266,21 +276,22 @@
 						<h4 class="modal-title">Schedule Vaccines</h4>
 				</div>
 				<div class="modal-body">
-				<form method="post" id="insert_form" enctype="multipart/form-data" action="#">
+				<form method="POST" id="insert_form" enctype="multipart/form-data" action="schedule.php">
+					<span style="color: red;">Your Records Will be Updated Once You Click Schedule</span><br><br>
+
 					<label>Vaccine Name</label>
-					<input type="text" name="name" id="name" class="form-control"><br>
+					<input type="text" name="name" id="name" class="form-control" required><br>
 				
 					<label>Date Scheduled</label>
-					<input type="date" name="date" id="startdate" class="form-control"><br>
+					<input type="date" name="date1" id="startdate" class="form-control" required><br>
 
 					
 					<label>Hospital To Be Administered At</label>
-					<input type="text" name="hospital" id="hospital" class="form-control"><br>
+					<input type="text" name="hospital" id="hospital" class="form-control" required><br>
 					
-					<label>Comments</label>
-					<textarea name="comment" id="comment" class="form-control"></textarea>
+			
 
-					<input type="submit" name="insert" id="insert" value="Schedule">
+					<input type="submit" name="schedule" id="schedule" value="Schedule">
 				</form>
 			</div>
 			<div class="modal-footer">

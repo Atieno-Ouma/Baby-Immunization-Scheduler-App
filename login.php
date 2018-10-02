@@ -1,42 +1,41 @@
-<?php
-$username=filter_input(INPUT_POST, 'username');
-$password=filter_input(INPUT_POST, 'password');
-if (!empty($username)) {
-	if (!empty($password)) {
-		$host="localhost";
-		$dbusername="root";
-$dbpassword="";
-$dbname="baby";
+<?php 
+session_start();
+$error = '';
 
-//create connection
-$conn=new mysqli ($host,$dbusername,$dbpassword,$dbname);
 
-if (mysqli_connect_error()) {
-	die('Connect Error('.mysqli_connect_errorno().')'.mysqli_connect_error());
+if(isset($_POST['login']))
+{
+	$conn = mysqli_connect("localhost","root","","babyimmunization");
 
-	# code...
-}
-else{
-	$sql="INSERT INTO login (username,password) values('$username','$password') ";
-	if($conn->query($sql)){
-		echo "New record is inserted succesfully";
+
+	if(empty($_POST['name']) || empty($_POST['pword']))
+	{
+		$error= "Username or Password is missing";
 	}
-	else {
-		echo "Error:" .$sql . "<br>" . $conn->error;
+	else if(!empty($_POST['name']) && !empty($_POST['pword']))
+	{ 
+		$username = $_POST['name'];
+		$password = $_POST['pword'];
+
+
+		$query = "SELECT username, password from allusers where username='?' AND password='?' LIMIT 1";
+
+		mysqli_query($conn,$query);
+
+		$_SESSION['message'] = "You are successfully logged in";
+		$_SESSION['name'] = $username;
+		header("location: home.php");// take me to home page
+
 	}
-	$conn->close();
-	# code...
+	
+	else 
+	{
+		//fail to create user
+		$_SESSION['message'] = "Username and password do not match";
+		header("location: form.php");
+	}
 }
-}
-else{
 
-	echo "password should not be empty";
-	die();
-}
-}
-else{
-	echo "Username should not be empty";
-	die();
 
-}
+
 ?>

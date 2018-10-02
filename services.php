@@ -52,7 +52,7 @@ session_start();
 			background-color: cyan;
 			color: black;
 			text-align: center;
-			width: 500px;
+			width: 600px;
 			padding-right: 20px;
 			display: inline-block;
 			padding-top: 0px;
@@ -79,11 +79,13 @@ session_start();
 	<header><b><p style="font-size: 25px; padding-left: 3px;">Baby Immunization<img src="logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px; padding-top: 20px; padding-left: 3px;"></p></b></header><br>
 	<nav>
 		<ul>
-			<li><a href="home.html">Home</a></li>
-			<li><a href="aboutus.html">About</a></li>
-			<li><a class="activelink"  href="services.html">Services</a></li>
-			<li><a href="contactus.html">Contact us</a></li>
-			<li><a href="#">Login</a></li>
+			            <li><a href="babyaccount.php">Hello,<?php echo $_SESSION['name']; ?></a></li>
+
+			<li><a href="home.php">Home</a></li>
+			<li><a href="aboutus.php">About</a></li>
+			<li><a class="activelink"  href="services.php">Services</a></li>
+			<li><a href="contactus.php">Contact us</a></li>
+			<li><a href="logout.php">Logout</a></li>
 		</ul>
 	</nav><br><br><br>
 
@@ -159,8 +161,8 @@ session_start();
 	<a href="#" id="a" class="btn">Baby Height</a>
 </td>
 <td style="padding-left: 50px;">
-		<a href="#" id="a" class="btn">Pediatrician Records</a>
-</td>
+
+<button type="button" name="add" id="add" data-toggle="modal" data-target="#add_data_Modal2" class="btn btn-warning" style="color: blue; background-color: white; padding-left: 40px; border-style: none;"> Pediatrician Records</button></td>
 </tr>
 
 
@@ -292,6 +294,48 @@ session_start();
 			
 
 					<input type="submit" name="schedule" id="schedule" value="Schedule">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--pediatrician records pop up -->
+<div class="container">
+		<div class="table-responsive">
+			
+		</div>
+	</div>
+
+	<div id="add_data_Modal2" class="modal fade" >
+		
+		<div class="modal-dialog">
+			
+			<div class="modal-content">
+				<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Add Pediatrician Visited</h4>
+				</div>
+				<div class="modal-body">
+				<form method="POST" id="insert_form" enctype="multipart/form-data" action="pedi.php">
+
+					<span style="color: red;">Your Records Will be Updated Once You Click Submit</span><br><br>
+
+					<label>Pediatrician Name</label>
+					<input type="text" name="name" id="name" class="form-control" required><br>
+					<label>Hospital</label>
+					<input type="text" name="hospital" id="hospital" class="form-control" required><br>
+					<label>Date Visited</label>
+					<input type="date" name="datevisited" id="datevisited" class="form-control" required><br>
+					
+					
+
+					<input type="submit" name="insert" id="insert" value="Submit">
 				</form>
 			</div>
 			<div class="modal-footer">

@@ -69,11 +69,13 @@ footer
 	<header><b><p style="font-size: 25px; padding-left: 3px;">Baby Immunization<img src="logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px; padding-top: 20px; padding-left: 3px;"></p></b></header><br>
 	<nav>
 		<ul>
-			<li><a href="home.html">Home</a></li>
-			<li><a href="aboutus.html">About</a></li>
-			<li><a class="activelink"  href="services.html">Services</a></li>
-			<li><a href="contactus.html">Contact us</a></li>
-			<li><a href="#">Login</a></li>
+			 <li><a class="activelink" href="babyaccount.php">Hello,<?php echo $_SESSION['name']; ?></a></li>
+
+			<li><a href="home.php">Home</a></li>
+			<li><a href="aboutus.php">About</a></li>
+			<li><a   href="services.php">Services</a></li>
+			<li><a href="contactus.php">Contact us</a></li>
+			<li><a href="logout.php">Logout</a></li>
 		</ul>
 	</nav><br><br><br>
 
@@ -84,7 +86,6 @@ footer
 <table>
 
 	<tr>
-		<td>Hello, <?php ?></td>
 	</tr> <!--echo baby name here -->
 
 <tr>
@@ -102,7 +103,7 @@ footer
 	<td></td>
 	<td></td>
 	<td style="text-align: center; color: crimson; font-size: 
-	30px; font-weight: bold; padding-left: 10px; padding-right: 10px;"><i>Baby Health Report</i></td>
+	30px; font-weight: bold; padding-left: 10px; padding-right: 10px;"><i><?php echo $_SESSION['name']; ?>'s Health Report</i></td>
 	<td></td>
 	<td></td>
 </tr>
@@ -117,11 +118,11 @@ footer
 </tr>
 
 <tr>
-	<td style="padding-left: 2px;">Vaccines Aministered</td><!-- link administered-->
-	<td>Vaccines Scheduled</td><!--link scheduled -->
+	<td style="padding-left: 30px;"><a href="displayvacc.php">Vaccines Administered</a></td><!-- link administered-->
+	<td style="padding-left: 30px;"><a href="displayshed.php">Vaccines Scheduled</a></td><!--link scheduled -->
 	<td> Medicines Taken</td><!-- link taken meds-->
 	<td>Growth</td><!-- link growth -->
-	<td>Pediatricians Visited</td><!-- link peds  -->
+	<td style="padding-left: 30px;"><a href="displaypedi.php">Pediatricians Visited</a></td><!--link pedis -->
 
 </tr>
 

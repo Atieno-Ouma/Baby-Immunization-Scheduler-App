@@ -20,13 +20,12 @@ session_start();
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script src="~/Scripts/jquery-2.1.4.min.js"></script>
-    <script src="~/Scripts/moment.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 	<style>
+	body
+	{
+			font-family: montserrat-Regular;
+
+	}
 		#btnlinks, #btnlinks1, #btnlinks2, #btnlinks3
 		{
 			width:100px;
@@ -300,11 +299,10 @@ session_start();
 		</div>
 	</div>
 </div>
-	<footer>
-		<p>HOME, ABOUT, SERVICES,CONTACT US,LOGIN</p>
-		<p><b>Copyright &copy; 2018. Baby Immunization Scheduler</b> </p>
-	</footer>
-
+	  <footer><br>
+        <p>HOME | ABOUT | SERVICES | CONTACT US | LOGIN</p>
+        <p><b>Copyright &copy; 2018. Baby Immunization Scheduler</b> </p>
+    </footer>
 
 
 

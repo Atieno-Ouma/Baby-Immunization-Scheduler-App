@@ -24,6 +24,7 @@ session_start();
 	body
 	{
 			font-family: montserrat-Regular;
+			font-size: 14px;
 
 	}
 		#btnlinks, #btnlinks1, #btnlinks2, #btnlinks3
@@ -43,7 +44,7 @@ session_start();
 			text-align: center;
 			font-family: montserrat-Regular;
 			text-decoration: none;
-			font-size: 25px;
+			font-size: 20px;
 			display: inline-block;
 		}
 		nav
@@ -299,7 +300,7 @@ session_start();
 		</div>
 	</div>
 </div>
-	  <footer><br>
+	  <footer>
         <p>HOME | ABOUT | SERVICES | CONTACT US | LOGIN</p>
         <p><b>Copyright &copy; 2018. Baby Immunization Scheduler</b> </p>
     </footer>

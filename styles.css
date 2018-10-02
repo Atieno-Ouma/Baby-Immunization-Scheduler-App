@@ -27,7 +27,7 @@ li
 
 h1
 {
-	font-size:30px;
+	font-size:25px;
 	text-align: center;
 
 }
@@ -38,7 +38,7 @@ hr
 li a
 { display: inline;
   text-decoration: none; 
-  font-size: 18px;
+  font-size: 14px;
 }
 img
 {

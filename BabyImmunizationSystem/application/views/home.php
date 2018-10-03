@@ -1,3 +1,10 @@
+<?php 
+
+session_start();
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,18 +12,62 @@
         <title>Home</title>
         <script src="jquery-331.js"></script>
         <script src="home.js"></script>
+            <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/styles.css">
+                <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    nav
+        {
+            background-color: cyan;
+            color: black;
+            text-align: center;
+            width: 600px;
+            padding-right: 20px;
+            display: inline-block;
+            padding-top: 0px;
+            justify-content: space-around;
+            display: flex;
+            margin: 0 5px;
+
+        }
+        nav ul li {
+    border-left:1px ;
+    list-style-type:none;
+    padding:10px;
+    width:100%;                                 
+    }
+    .activelink{
+    background-color: white;
+    display: inline-block;
+}
+
+
+</style>
     </head>
+
     <body>
-        <link rel="stylesheet" type="text/css" href="home.css">
-        <header>
-            <li id="myNav">
-                <ul class="contents">Login</ul>
-                <ul class="contents"><a href="Contactus">Contact us</a></ul>
-                <ul class="contents"><a href="Service">Services</a></ul>
-                <ul class="contents"><a href="Aboutus">About</a></ul>
-                <ul class="contents"><a href="Home">Home</a></ul>
-            </li>
-        </header>
+
+  <header><b><p style="font-size: 25px; padding-left: 3px;">Baby Immunization <img src="<?php echo base_url() ?>assets/images/logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px; padding-top: 0px; padding-left: 3px;"></p></b></header><br>
+    <nav>
+        <ul>
+                        <li><a href="babyaccount.php">Hello,<?php echo $_SESSION['name']; ?></a></li>
+
+            <li><a href="Home">Home</a></li>
+            <li><a href="Aboutus">About</a></li>
+            <li><a class="activelink"  href="Service">Services</a></li>
+            <li><a href="Contactus">Contact us</a></li>
+            <li><a href="Login">Logout</a></li>
+        </ul>
+
+        </ul>
+    </nav><br><br><br>
+
 
         <!--
             <img class="gallery" src="baby1.png">
@@ -25,49 +76,22 @@
             <img class="gallery" src="baby4.png">
         -->
 
-        <img class="images" src="baby4.png">
+        <img class="images" src="<?php echo base_url() ?>assets/images/baby4.png">
         <div id="parallax1">
             <div class="articles">
-                <article id = "about">
-                    <h3>About</h3>
-                    <hr>
-                    <p>Cillum sint culpa consequat dolor ea fugiat velit est. Culpa consectetur aute incididunt do nulla Lorem in officia id cillum. Est amet consectetur ex anim occaecat ea cupidatat.</p>
-                </article>
+               
                 
-                <article id = "services">
-                    <h3>Services</h3>
-                    <hr>
-                    <p>Deserunt sint aliquip quis Lorem aute minim enim dolor do. Nisi laboris do eiusmod aute ea labore sint et occaecat labore ut. Velit aliquip laborum do anim ipsum laborum non anim excepteur. Sint id cupidatat laboris culpa proident adipisicing sit. Duis dolor velit proident laboris qui adipisicing duis anim veniam officia enim. Aliqua eu adipisicing velit quis tempor quis ullamco. Culpa ullamco id amet pariatur est ea deserunt excepteur aute enim in pariatur et ad.</p>
-                </article>
-                
-                <article id="logup">
-                    <h3>Create account</h3>
-                    <hr>
-                    <p>Aliqua Lorem incididunt sit pariatur eiusmod eu pariatur culpa occaecat eu cillum laboris do et. Elit sunt laborum ut est ex non. Consectetur qui eiusmod cillum velit esse anim ipsum duis aliquip laboris consequat mollit. Veniam amet sit enim ut labore in aliqua ad duis ex culpa dolor.</p>
-                </article>
+              
             </div>
         </div>
 
-        <img class="images" src="baby2.png">
 
-        <div id="parallax2">
-            <div class="articles">
-                <article id="why_us">
-                    <h1>Why Us</h1>
-                    <p>Fugiat sit exercitation nulla veniam ullamco minim dolore. Nisi magna nostrud sint excepteur ullamco laborum. Nostrud aute aliquip sit nisi excepteur est anim Lorem labore non enim adipisicing. In dolore id sint reprehenderit nostrud fugiat anim do. Et sunt et aute eiusmod labore ipsum consectetur elit occaecat sint labore duis culpa voluptate. Magna magna do exercitation ullamco pariatur duis velit est. Duis deserunt ad incididunt commodo laborum nulla mollit. Id excepteur irure nulla ex mollit.Consequat magna esse dolor deserunt ullamco nisi consequat fugiat sint et id. Nisi excepteur eu magna dolore. Eiusmod excepteur occaecat voluptate eiusmod aute irure eu qui consectetur adipisicing nostrud do eu esse. Voluptate ipsum id mollit sint esse minim amet ad quis excepteur enim cillum aliqua excepteur.</p>
-                </article>
-            </div>
-        </div>
+       
 
-        <footer>
-            <li id="footList">
-                <ul><a>Home</a></ul>
-                <ul><a>About</a></ul>
-                <ul><a>Services</a></ul>
-                <ul><a>Contact us</a></ul>
-            </li>
+      <footer>
+        <p>HOME | ABOUT | SERVICES | CONTACT US | LOGIN</p>
+        <p><b>Copyright &copy; 2018. Baby Immunization Scheduler</b> </p>
+    </footer>
 
-            <p>Copyright&#169 Baby Immunization Scheduler</p>
-        </footer>
     </body>
 </html>

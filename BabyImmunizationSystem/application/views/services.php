@@ -24,6 +24,7 @@ session_start();
 	body
 	{
 			font-family: montserrat-Regular;
+			font-size: 14px;
 
 	}
 		#btnlinks, #btnlinks1, #btnlinks2, #btnlinks3
@@ -43,7 +44,7 @@ session_start();
 			text-align: center;
 			font-family: montserrat-Regular;
 			text-decoration: none;
-			font-size: 25px;
+			font-size: 20px;
 			display: inline-block;
 		}
 		nav
@@ -51,7 +52,7 @@ session_start();
 			background-color: cyan;
 			color: black;
 			text-align: center;
-			width: 500px;
+			width: 600px;
 			padding-right: 20px;
 			display: inline-block;
 			padding-top: 0px;
@@ -78,11 +79,13 @@ session_start();
 	<header><b><p style="font-size: 25px; padding-left: 3px;">Baby Immunization<img src="<?php echo base_url() ?>assets/images/logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px; padding-top: 20px; padding-left: 3px;"></p></b></header><br>
 	<nav>
 		<ul>
+			           <li><a href="babyaccount.php">Hello,<?php echo $_SESSION['name']; ?></a></li>
+
 			<li><a href="Home">Home</a></li>
 			<li><a href="Aboutus">About</a></li>
 			<li><a class="activelink"  href="Service">Services</a></li>
 			<li><a href="Contactus">Contact us</a></li>
-			<li><a href="#">Login</a></li>
+			<li><a href="Login">Logout</a></li>
 		</ul>
 	</nav><br><br><br>
 
@@ -135,10 +138,10 @@ session_start();
 <table border="0" style="color: black; font-weight: bold;">
 <tr>
 	<!--Imagesrow -->
-	<td><img src="vaccination.jpg" width="300px;" height="300px;" style="padding-right: 12px; margin-left: 20px; margin-right: 25px;"></td>
-	<td><img src="medicine.jpg" width="300px;" height="300px;" style="padding-right: 12px; margin-right: 20px;""></td>
-	<td><img src="growth.jpg" width="300px;" height="300px;" style="padding-right: 12px; margin-right: 20px;""></td>
-	<td><img src="pediatrician.jpg" width="300px;" height="300px;" style="padding-right: 12px;"></td>
+	<td><img src="<?php echo base_url() ?>assets/images/vaccination.jpg" width="300px;" height="300px;" style="padding-right: 12px; margin-left: 20px; margin-right: 25px;"></td>
+	<td><img src="<?php echo base_url() ?>assets/images/medicine.jpg" width="300px;" height="300px;" style="padding-right: 12px; margin-right: 20px;""></td>
+	<td><img src="<?php echo base_url() ?>assets/images/growth.jpg" width="300px;" height="300px;" style="padding-right: 12px; margin-right: 20px;""></td>
+	<td><img src="<?php echo base_url() ?>assets/images/pediatrician.jpg" width="300px;" height="300px;" style="padding-right: 12px;"></td>
 </tr>
 
 
@@ -158,8 +161,8 @@ session_start();
 	<a href="#" id="a" class="btn">Baby Height</a>
 </td>
 <td style="padding-left: 50px;">
-		<a href="#" id="a" class="btn">Pediatrician Records</a>
-</td>
+
+<button type="button" name="add" id="add" data-toggle="modal" data-target="#add_data_Modal2" class="btn btn-warning" style="color: blue; background-color: white; padding-left: 40px; border-style: none;"> Pediatrician Records</button></td>
 </tr>
 
 
@@ -224,7 +227,7 @@ session_start();
 						<h4 class="modal-title">Add Vaccines Administered</h4>
 				</div>
 				<div class="modal-body">
-				<form method="POST" id="insert_form" enctype="multipart/form-data" action="administered.php">
+				<form method="POST" id="insert_form" enctype="multipart/form-data" action="Administered">
 
 					<span style="color: red;">Your Records Will be Updated Once You Click Submit</span><br><br>
 
@@ -299,7 +302,49 @@ session_start();
 		</div>
 	</div>
 </div>
-	  <footer><br>
+
+
+
+<!--pediatrician records pop up -->
+<div class="container">
+		<div class="table-responsive">
+			
+		</div>
+	</div>
+
+	<div id="add_data_Modal2" class="modal fade" >
+		
+		<div class="modal-dialog">
+			
+			<div class="modal-content">
+				<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Add Pediatrician Visited</h4>
+				</div>
+				<div class="modal-body">
+				<form method="POST" id="insert_form" enctype="multipart/form-data" action="pedi.php">
+
+					<span style="color: red;">Your Records Will be Updated Once You Click Submit</span><br><br>
+
+					<label>Pediatrician Name</label>
+					<input type="text" name="name" id="name" class="form-control" required><br>
+					<label>Hospital</label>
+					<input type="text" name="hospital" id="hospital" class="form-control" required><br>
+					<label>Date Visited</label>
+					<input type="date"  name="datevisited" id="datevisited" class="form-control" required><br>
+					
+					
+
+					<input type="submit" name="insert" id="insert" value="Submit">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+	  <footer>
         <p>HOME | ABOUT | SERVICES | CONTACT US | LOGIN</p>
         <p><b>Copyright &copy; 2018. Baby Immunization Scheduler</b> </p>
     </footer>

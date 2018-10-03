@@ -86,14 +86,7 @@ session_start();
         </div>
 
 
-        <div id="parallax2">
-            <div class="articles">
-                <article id="why_us">
-                    <h1>Why Us</h1>
-                   
-                </article>
-            </div>
-        </div>
+       
 
       <footer>
         <p>HOME | ABOUT | SERVICES | CONTACT US | LOGIN</p>

@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -16,10 +18,25 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
+    echo "<table border='0' cellspacing='10'>
+
+<tr>
+<th>Vaccine name</th>
+<th>Date scheduled</th>
+<th>Hospital</th>
+</tr>";
     while($row = $result->fetch_assoc()) {
-    	
-        echo "" . $row["vaccinename"]. " | " . $row["thedate"]. " | " . $row["hospital"]. "<br>";
+
+    	echo "<tr>";
+echo "<td>" . $row['vaccinename'] . "</td>";
+echo "<td>" . $row['thedate'] . "</td>";
+
+echo "<td>" . $row['hospital'] . "</td>";
+echo "</tr>";
     }
+
+        echo "</table>";
+
 } else {
     echo "0 results";
 }

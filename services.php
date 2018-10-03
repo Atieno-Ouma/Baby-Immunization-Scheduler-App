@@ -331,7 +331,7 @@ session_start();
 					<label>Hospital</label>
 					<input type="text" name="hospital" id="hospital" class="form-control" required><br>
 					<label>Date Visited</label>
-					<input type="date" name="datevisited" id="datevisited" class="form-control" required><br>
+					<input type="date"  name="datevisited" id="datevisited" class="form-control" required><br>
 					
 					
 

@@ -15,7 +15,6 @@ if($password1 == $password2)
 {
 //create user account
 	$babyname=$_POST['name'];
-	$babypic=$_POST['pic'];
 	$dob=$_POST['date1'];
 	$gender=$_POST['gender'];
 	$email=$_POST['email'];
@@ -23,7 +22,7 @@ if($password1 == $password2)
 
 $username=$_POST['username'];
 $password1 = md5($password1); //hash password before storing it for security
-$sql="INSERT INTO allusers (babyname,babypic,dob,gender,email,phone,username,password) VALUES ('$babyname','$babypic','$dob','$gender','$email','$phone','$username','$password1')";
+$sql="INSERT INTO allusers (babyname,dob,gender,email,phone,username,password) VALUES ('$babyname','$dob','$gender','$email','$phone','$username','$password1')";
 
 mysqli_query($db,$sql);
 $_SESSION['message'] = "You are successfully logged in";

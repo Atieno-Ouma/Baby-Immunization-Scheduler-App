@@ -30,7 +30,7 @@ session_start();
 
 </li>
 <li ><a  href="services.php">Services</a></li>
-<li ><a class="activelink" href="#CONTACTUS">Contact Us</a></li>
+<li ><a class="activelink" href="contactus.php">Contact Us</a></li>
 <li ><a  href="logout.php">Logout</a></li>
 </ul>
 <div align="center" class="prop">

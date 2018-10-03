@@ -16,6 +16,8 @@ session_start();
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+
 	<style>
 
 	body{
@@ -49,24 +51,25 @@ session_start();
 	</style>
 </head>
 <body>
-	<header><b><p style="font-size: 25px; color: white;">Baby Immunization<img src="logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px;"></p></b></header>
+	<header><b><p style="font-size: 25px; color: white;margin-left: 80px;">Baby Immunization<img src="logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px;"></p></b></header>
 <div class="me">
 		<ul>
-			<li style="text-align: right; float: right; font-size: 25px; padding-top: 0; color: white; margin-left: 10px; margin-right: 5px;"><i><b>babyimmunization@gmail.com</i></b></b>
+			<li style="text-align: right; float: right; font-size: 25px; padding-top: 0; color: white; margin-right: 140px;"><b><i>+254 700 000 234</i></b></li>
+			<li style="text-align: right; float: right; font-size: 25px; padding-top: 0; color: white; margin-right: 60px; "><i><b>babyimmunization@gmail.com</i></b></b>
 		</li>
-		<li style="text-align: right; float: right; font-size: 25px; padding-top: 0; color: white;"><b><i>+254 700 000 234</i></b></li>
+		
 		</ul>
 	</div>
 
 <br><br><br><br>
-<p style="float: left; color: white; font-size: 25px; padding-bottom: 20px; padding-top: 20px;">
+<p style="float: left; color: white; font-size: 25px; padding-bottom: 20px; padding-top: 20px; margin-left: 80px;">
 	<i>Baby Immunization Scheduling App Assists Modern Kenyan Parents To Keep Track Of Their Babies Development.<br>
 	It Tracks Vaccinations, Growth, Medicines and Pediatricians Visited.<br>
 	Through Baby Immunizatoon Scheduler Your Child(ren) Health Becomes A Button Away.</i>
 </p>
 	
 	<br><br><br>
-<p style="float: left; color: white; font-size: 25px; text-decoration: underline; margin-top: 20px;"><i>Proceed To Login or Sign Up Below</i></p><br>
+
 
 
 
@@ -134,8 +137,7 @@ session_start();
 
 					<label>Baby Name</label>
 					<input type="text" name="name" id="name" class="form-control" required><br>
-					<label>Baby Pic</label>
-					<input type="file" name="pic" id="pic" class="form-control" required><br>
+					
 					<label>Date Of Birth</label>
 					<input type="date" name="date1" id="startdate" class="form-control" required><br>
 					<label>Gender</label><br>

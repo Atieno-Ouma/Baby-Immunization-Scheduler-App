@@ -155,10 +155,10 @@ session_start();
 
 </td>
 <td style="padding-left: 40px;">
- 		<a href="#" id="a" class="btn">Medicine Taken</a>
+	<button type="button" name="add" id="add" data-toggle="modal" data-target="#add_data_Modal3" class="btn btn-warning" style="color: blue; background-color: white; padding-left: 40px; border-style: none;"> Medicine Taken</button>
 </td>
 <td style="padding-left: 40px;">
-	<a href="#" id="a" class="btn">Baby Height</a>
+	<button type="button" name="add" id="add" data-toggle="modal" data-target="#add_data_Modal4" class="btn btn-warning" style="color: blue; background-color: white; padding-left: 40px; border-style: none;"> Baby Growth</button>
 </td>
 <td style="padding-left: 50px;">
 
@@ -175,10 +175,8 @@ session_start();
 </td>
 
 		<td style="padding-left: 40px;">
-			<a href="#" id="a" class="btn">Medicine Dosage</a>
 </td>
 	<td style="padding-left: 40px;">
-		<a href="#" id="a" class="btn">Baby Weight</a>
 </td>
 	
 
@@ -194,11 +192,9 @@ session_start();
 
 </td>
 		<td style="padding-left: 40px;">
-			 	<a href="#" id="a" class="btn">Comments</a>
 		</td>
 
 	<td style="padding-left: 40px;">
-	<a href="#" id="a" class="btn">Baby Age</a>
 </td>
 	<td></td>
 
@@ -305,7 +301,7 @@ session_start();
 
 
 
-<!--pediatrician records pop up -->
+<!--pediatrician records pop up form-->
 <div class="container">
 		<div class="table-responsive">
 			
@@ -344,7 +340,93 @@ session_start();
 		</div>
 	</div>
 </div>
-	  <footer>
+
+<!-- MODAL TO TAKE IN THE DATA for medicines pop up-->
+
+	<div class="container">
+		<div class="table-responsive">
+			
+		</div>
+	</div>
+
+	<div id="add_data_Modal" class="modal fade" >
+		
+		<div class="modal-dialog">
+			
+			<div class="modal-content">
+				<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Add Medicines Taken</h4>
+				</div>
+				<div class="modal-body">
+				<form method="POST" id="#" enctype="multipart/form-data" action="#">
+
+					<span style="color: red;">Your Records Will be Updated Once You Click Submit</span><br><br>
+					<label>Name</label>
+					<input type="text" name="medicinename" id="medicinename" class="form-control" required><br>
+					<label>Dosage</label>
+					<input type="text" name="dosage" id="dosage" class="form-control" required><br>
+					<label>Start Date</label>
+					<input type="date" name="startdate" id="startdate" class="form-control" required><br>
+					<label>Date of Completion</label>
+					<input type="date" name="enddate" id="enddate" class="form-control" required><br>
+					<label>Comments(side effects)</label>
+					<textarea name="medicineComments" id="medicineComments" class="form-control" ></textarea>
+					
+
+					<input type="submit" name="insert" id="insert" value="Save">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- MODAL TO TAKE IN THE DATA for growth pop up-->
+
+	<div class="container">
+		<div class="table-responsive">
+			
+		</div>
+	</div>
+
+	<div id="add_data_Modal4" class="modal fade" >
+		
+		<div class="modal-dialog">
+			
+			<div class="modal-content">
+				<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Baby Growth Tracker</h4>
+				</div>
+				<div class="modal-body">
+				<form method="POST" id="#" enctype="multipart/form-data" action="#">
+
+					<span style="color: red;">Your Records Will be Updated Once You Click Submit</span><br><br>
+					<label>Baby Height</label>
+					<input type="number" name="height" id="height" class="form-control" required><br>
+					<label>Baby weight</label>
+					<input type="number" name="weight" id="weight" class="form-control" required><br>
+					<label>Baby Age</label>
+					<input type="number" name="age" id="age" class="form-control" required><br>
+					<label>Date of Record Entry</label>
+					<input type="date" name="recorddate" id="recorddate" class="form-control" required><br>
+					<label>Comments(baby's body state)</label>
+					<textarea name="growthComments" id="growthComments" class="form-control" ></textarea>
+					
+
+					<input type="submit" name="insert" id="insert" value="Save">
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+	  <footer style="position: fixed;">
         <p>HOME | ABOUT | SERVICES | CONTACT US | LOGIN</p>
         <p><b>Copyright &copy; 2018. Baby Immunization Scheduler</b> </p>
     </footer>

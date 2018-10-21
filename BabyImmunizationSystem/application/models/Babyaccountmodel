@@ -1,0 +1,14 @@
+<?php
+Class Babyaccountmodel extends CI_Model
+{
+	function fetch_single_data($accountid){
+		$this->db->where("name",$name);
+		$query=$this->db->get("babyaccount");
+		return $query;
+	}
+ /*function update_data($data)
+ {
+  $this->db->update("babyaccount",$data);
+
+  }*/
+}

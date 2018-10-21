@@ -14,11 +14,19 @@ class Homecontroller extends CI_Controller {
 
 public function index()
 	{
-		$this->load->view('home');
+		
+		if($this->session->userdata('username')!='')
+
+		{
+			$this->load->view('home');
+			
+		
+		}
+		else{
+			redirect(base_url().'Logincontroller');
+		}
 	}
-	function services(){
-		$this->load->view('services');
-	}
+	
 
 }
 

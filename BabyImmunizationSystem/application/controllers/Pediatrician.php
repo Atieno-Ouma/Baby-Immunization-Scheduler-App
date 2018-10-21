@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Schedulecontroller extends CI_Controller {
+class Pediatrician extends CI_Controller {
 
 	public function __construct()
 	{
@@ -23,23 +23,24 @@ public function index()
 		else{
 			redirect(base_url().'Logincontroller');
 		}
+		
 	}
 	public function form_validation(){
 		//echo 'OK';
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules("vaccinename","Vaccine name", 'required');
-		$this->form_validation->set_rules("thedate","Date1", 'required');
+		$this->form_validation->set_rules("pediname","Pediatrician name", 'required');
 		$this->form_validation->set_rules("hospital","Hospital", 'required');
+		$this->form_validation->set_rules("datevisited","Datevisited", 'required');
 		if($this->form_validation->run()){
 			//true
-			$this->load->model('Schedulemodel');
+			$this->load->model('Pedimodel');
 			$data=array(
-				"vaccinename" =>$this->input->post("vaccinename"),
-				"thedate" =>$this->input->post("thedate"),
+				"pediname" =>$this->input->post("pediname"),
 				"hospital" =>$this->input->post("hospital"),
+				"datevisited" =>$this->input->post("datevisited"),
 		);
-			$this->Schedulemodel->insert_data($data);
-				redirect(base_url().'Schedulecontroller');
+			$this->Pedimodel->insert_data($data);
+				redirect(base_url().'Pediatrician');
 		}
 		else
 		{

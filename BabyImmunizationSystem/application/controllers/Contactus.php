@@ -13,7 +13,17 @@ class Contactus extends CI_Controller {
 	}
 public function index()
 	{
-		$this->load->view('contactus');
+		if($this->session->userdata('username')!='')
+
+		{
+			$this->load->view('contactus');
+			
+		
+		}
+		else{
+			redirect(base_url().'Logincontroller');
+		}
+		
 	}
 	public function form_validation(){
 		//echo 'OK';
@@ -31,8 +41,8 @@ public function index()
 				"Feedback" =>$this->input->post("Feedback"),
 				"Star_rating" =>$this->input->post("Star_rating"),
 		);
-			$this->Schedulemodel->insert_data($data);
-				redirect(base_url().'Contactuscontroller');
+			$this->Contactusmodel->insert_data($data);
+				redirect(base_url().'Contactus');
 		}
 		else
 		{

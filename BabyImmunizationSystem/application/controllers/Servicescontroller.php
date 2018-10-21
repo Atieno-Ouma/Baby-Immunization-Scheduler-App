@@ -13,7 +13,16 @@ class Servicescontroller extends CI_Controller {
 	}
 public function index()
 	{
+		if($this->session->userdata('username')!='')
+
+		{
 		$this->load->view('services');
+			
+		
+		}
+		else{
+			redirect(base_url().'Logincontroller');
+		}
 	}
 	public function form_validation(){
 		//echo 'OK';

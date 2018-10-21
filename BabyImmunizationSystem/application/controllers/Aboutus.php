@@ -13,9 +13,21 @@ class Aboutus extends CI_Controller {
 	}
 
 public function index()
+
 	{
-		$this->load->view('aboutus');
+		if($this->session->userdata('username')!='')
+
+		{
+			$this->load->view('aboutus');
+			
+		
+		}
+		else{
+			redirect(base_url().'Logincontroller');
+		}
+		
 	}
+
 	
 
 }

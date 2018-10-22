@@ -1,8 +1,6 @@
+
 <?php 
-
-session_start();
-
-
+ $this->session->userdata('username');
 ?>
 
 <!DOCTYPE html>
@@ -12,15 +10,15 @@ session_start();
         <title>Home</title>
         <script src="jquery-331.js"></script>
         <script src="home.js"></script>
-            <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/styles.css">
+            <link rel="stylesheet" href="<?php echo "http://localhost/BabyImmunization/" ?>assets/css/styles.css">
                 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"">
 
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <style>
     nav
         {
@@ -53,16 +51,16 @@ session_start();
 
     <body>
 
-  <header><b><p style="font-size: 25px; padding-left: 3px;">Baby Immunization <img src="<?php echo base_url() ?>assets/images/logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px; padding-top: 0px; padding-left: 3px;"></p></b></header><br>
+  <header><b><p style="font-size: 25px; padding-left: 3px;">Baby Immunization <img src="<?php echo "http://localhost/BabyImmunization/" ?>assets/images/logo.png" alt="Logo" style="width:100px; border-radius: 0; margin-left: 10px; padding-top: 0px; padding-left: 3px;"></p></b></header><br>
     <nav>
         <ul>
-                        <li><a href="babyaccount.php">Hello,<?php echo $_SESSION['name']; ?></a></li>
+                        <li><a href="<?php echo base_url();?>BabyAccount">Hello,<?php echo ''.$this->session->userdata('username').''; ?></a></li>
 
-            <li><a href="Home">Home</a></li>
-            <li><a href="Aboutus">About</a></li>
-            <li><a class="activelink"  href="Service">Services</a></li>
-            <li><a href="Contactus">Contact us</a></li>
-            <li><a href="Login">Logout</a></li>
+            <li><a href="<?php echo base_url();?>Homecontroller" class="activelink"  >Home</a></li>
+            <li><a href="<?php echo base_url();?>Aboutus">About us</a></li>
+            <li><a href="<?php echo base_url();?>Servicescontroller">Services</a></li>
+            <li><a href="<?php echo base_url();?>Contactus">Contact us</a></li>
+            <li><a href="<?php echo base_url();?>Logoutcontroller/logout">Logout</a></li>
         </ul>
 
         </ul>
@@ -75,8 +73,8 @@ session_start();
             <img class="gallery" src="baby3.png">
             <img class="gallery" src="baby4.png">
         -->
-
-        <img class="images" src="<?php echo base_url() ?>assets/images/baby4.png">
+ <h1><b>Baby immunization system<hr></h1></b>
+          <img class="images" src="<?php echo "http://localhost/BabyImmunization/"?>assets/images/baby4.png">
         <div id="parallax1">
             <div class="articles">
                
